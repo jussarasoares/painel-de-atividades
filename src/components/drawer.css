@@ -1,0 +1,42 @@
+.drawer {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background-color: #dbdbdb;
+  top: 64px;
+  width: 0px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.drawer.open {
+  width: 200px;
+}
+
+.drawer__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer__menu li {
+  padding: 15px;
+  font-size: 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.drawer__menu li:hover {
+  background: #ccc;
+}
+
+.drawer__menu li a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 15px;
+}
+
+.drawer__menu li.active a,
+.drawer__menu li a:hover {
+  color: #FF7F00;
+}

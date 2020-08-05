@@ -1,0 +1,42 @@
+.topbar {
+  color: #fff;
+  background: #FF7F00;
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.topbar__container {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  position: relative;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.topbar__title {
+  flex: 1;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 64px;
+}
+
+.topbar__icon {
+  width: 64px;
+  height: 64px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.topbar__icon:focus, .topbar__icon:active {
+  border: none;
+  outline: none;
+}
