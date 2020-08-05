@@ -1,0 +1,12 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  height: var(--topbar-height);
+  padding: 0;
+  border-top: 2px solid var(--color-primary);
+  background: var(--color-footer);
+  color: var(--color-primary);
+  text-align: center;
+}

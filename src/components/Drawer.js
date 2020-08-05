@@ -45,6 +45,12 @@ function Drawer({ open }) {
             Atividade 5
           </Link>
         </li>
+        <li className={`${currentMenu === "/atividade6" ? "active" : ""}`}>
+          <FontAwesomeIcon icon={faCheck} />
+          <Link to="/atividade5">
+            Atividade 6
+          </Link>
+        </li>
       </ul>
     </aside>
   )

@@ -1,1 +1,13 @@
 
+:root {
+  --color-background: #F0F0F7;
+  --color-primary: #EE7942;
+  --color-primary-light: #FF8247;
+  --color-title-in-primary: #FFFFFF;
+  --color-text-title: #1a1622;
+  --color-text-complement: #9C98A6;
+  --color-box-menu: #FAFAFC;
+  --color-footer: #fffffd;
+
+  --topbar-height: 64px
+}

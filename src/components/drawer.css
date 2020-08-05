@@ -2,8 +2,8 @@
   height: 100%;
   position: fixed;
   left: 0;
-  background-color: #dbdbdb;
-  top: 64px;
+  background-color: var(--color-background);
+  top: var(--topbar-height);
   width: 0px;
   overflow-x: hidden;
   transition: 0.5s;
@@ -27,16 +27,16 @@
 }
 
 .drawer__menu li:hover {
-  background: #ccc;
+  background: var(--color-box-menu);
 }
 
 .drawer__menu li a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text-title);
   margin-left: 15px;
 }
 
 .drawer__menu li.active a,
 .drawer__menu li a:hover {
-  color: #FF7F00;
+  color: var(--color-primary-light);
 }
