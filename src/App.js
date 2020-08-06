@@ -5,12 +5,9 @@ import useMedia from './utils/useMedia';
 import Topbar from './components/Topbar';
 import Drawer from './components/Drawer';
 import Footer from './components/Footer';
-import Activity1 from './pages/activity1';
-import Activity2 from './pages/activity2';
-import Activity3 from './pages/activity3';
-import Activity6 from './pages/activity6';
-import Activity5 from './pages/activity5';
-import Activity4 from './pages/activity4';
+import Activity from './components/Activity';
+import Default from './components/Default';
+import activities from './data/mock_activity.json';
 
 function App() {
   const isMobile = useMedia(
@@ -19,38 +16,6 @@ function App() {
     false
   )
   const [isOpen, setIsOpen] = useState(false);
-  const activities = [
-    {
-      name: "Atividade 1",
-      path: "/",
-      component: <Activity1 />
-    },
-    {
-      name: "Atividade 2",
-      path: "/atividade2",
-      component: <Activity2 />
-    },
-    {
-      name: "Atividade 3",
-      path: "/atividade3",
-      component: <Activity3 />
-    },
-    {
-      name: "Atividade 4",
-      path: "/atividade4",
-      component: <Activity4 />
-    },
-    {
-      name: "Atividade 5",
-      path: "/atividade5",
-      component: <Activity5 />
-    },
-    {
-      name: "Atividade 6",
-      path: "/atividade6",
-      component: <Activity6 />
-    },
-  ]
 
   useEffect(() => {
     setIsOpen(!isMobile)
@@ -68,8 +33,11 @@ function App() {
         <main className={`app__content ${isOpen ? "open" : ""}`}>
           <Switch>
             {activities.map((activity) => (
-              <Route path={activity.path} exact>{activity.component}</Route>
+              <Route path={activity.path} exact>
+                <Activity name={activity.name} description={activity.description} />
+              </Route>
             ))}
+            <Route component={Default} />
           </Switch>
         </main>
         <Footer />
