@@ -1,5 +1,5 @@
 .drawer {
-  height: 100%;
+  height: 87vh;
   position: fixed;
   left: 0;
   background-color: var(--color-background);
@@ -7,10 +7,11 @@
   width: 0px;
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .drawer.open {
-  width: 200px;
+  width: 18vw;
 }
 
 .drawer__menu {
@@ -39,4 +40,10 @@
 .drawer__menu li.active a,
 .drawer__menu li a:hover {
   color: var(--color-primary-light);
+}
+
+@media (max-width: 700px) {
+  .drawer.open {
+    width: 90vw;
+  }
 }

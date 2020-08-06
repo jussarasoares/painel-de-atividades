@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import './drawer.css';
 
-function Drawer({ open }) {
+function Drawer({ onToggle, open, mobile, menus }) {
   const [currentMenu, setCurrentMenu] = useState("");
   const location = useLocation();
 
@@ -12,45 +12,23 @@ function Drawer({ open }) {
     setCurrentMenu(location.pathname)
   }, [location])
 
+  function onClick() {
+    if (mobile) {
+      onToggle()
+    }
+  }
+
   return (
     <aside className={`drawer ${open ? "open" : ""}`} >
       <ul className="drawer__menu">
-        <li className={`${currentMenu === "/" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/">
-            Atividade 1
-          </Link>
-        </li>
-        <li className={`${currentMenu === "/atividade2" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/atividade2">
-            Atividade 2
-          </Link>
-        </li>
-        <li className={`${currentMenu === "/atividade3" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/atividade3">
-            Atividade 3
-          </Link>
-        </li>
-        <li className={`${currentMenu === "/atividade4" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/atividade4">
-            Atividade 4
-          </Link>
-        </li>
-        <li className={`${currentMenu === "/atividade5" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/atividade5">
-            Atividade 5
-          </Link>
-        </li>
-        <li className={`${currentMenu === "/atividade6" ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faCheck} />
-          <Link to="/atividade5">
-            Atividade 6
-          </Link>
-        </li>
+        {menus.map((menu) => (
+          <li className={`${currentMenu === menu.path ? "active" : ""}`}>
+            <FontAwesomeIcon icon={faCheck} />
+            <Link to={menu.path} onClick={onClick}>
+              {menu.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </aside>
   )
