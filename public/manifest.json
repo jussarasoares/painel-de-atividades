@@ -1,6 +1,6 @@
 {
-  "short_name": "AVA Teste",
-  "name": "AVA Teste",
+  "short_name": "Painel Admin",
+  "name": "Painel Admin",
   "icons": [],
   "start_url": ".",
   "display": "standalone",

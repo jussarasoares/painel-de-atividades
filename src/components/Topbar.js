@@ -10,13 +10,13 @@ function Topbar({ onToggle }) {
         <button className="topbar__icon" onClick={onToggle}>
           <FontAwesomeIcon icon={faBars} color="white" size="lg" />
         </button>
-        <h1 className="topbar__title">AVA Teste</h1>
+        <h1 className="topbar__title">Painel Administrativo</h1>
         <button className="topbar__icon">
           <FontAwesomeIcon icon={faInfoCircle} color="white" size="lg" />
         </button>
       </div>
     </header>
-  )
+  );
 }
 
 export default Topbar;

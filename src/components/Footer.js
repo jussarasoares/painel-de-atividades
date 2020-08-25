@@ -4,7 +4,7 @@ import './footer.css';
 function Footer() {
   return (
     <div className="footer">
-      <p>AVA</p>
+      <p>Admin Store</p>
     </div>
   );
 }

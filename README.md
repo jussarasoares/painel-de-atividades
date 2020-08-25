@@ -1,6 +1,6 @@
-# Painel com Lista de Atividades
+# Painel Administrativo
 
-## Teste Prático AVA
+## Painel com lista de atividades
 
 <p>
 <img src="https://img.shields.io/badge/-React-blue">
