@@ -8,6 +8,8 @@
 <img src="https://img.shields.io/badge/-HTML-green">
 <img src="https://img.shields.io/badge/-CSS-red"></p>
 
+<img src="./src/assets/images/painel.png">
+
 ## Para instalar:
 
 ```sh
